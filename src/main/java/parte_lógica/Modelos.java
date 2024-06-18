@@ -1,21 +1,21 @@
 package parte_lógica;
 /**Categorías de asiento
  * @author Gustavo González
- * @version versión 2, 17 de junio 2024*/
+ * @version versión 3, 17 de junio 2024*/
 public enum Modelos {
-    /**Constantes de la enumeración (categorías de asientos)*/
+    /**Constantes de la enumeración (modelos de naves espaciales)*/
     UES_CONTACT_LIGHT("UES Contact Light"),
-    SALÓN_CAMA("salón cama");
-    /**Categoría del asiento*/
+    ARCA_DEL_VACÍO("Arca del Vacío");
+    /**Modelo de la nave*/
     private final String modelo;
-    /**Constructor de categorías
+    /**Constructor de Modelos
      * @param modelo String*/
     Modelos(String modelo) {
         this.modelo = modelo;
     }
     /**Getter del modelo de la nave espacial
      * @return modelo de la nave espacial*/
-    public String getModelo() {
+    public String getmodelo() {
         return modelo;
     }
 }
