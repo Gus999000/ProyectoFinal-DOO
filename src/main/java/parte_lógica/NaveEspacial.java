@@ -1,9 +1,9 @@
 package parte_lógica;
-import java.util.ArrayList;
+import java.util.*;
 /**Clase nave espacial
  * @author Gustavo González
  * @version versión 1, 10 de junio 2024*/
-public class nave_espacial {
+public abstract class NaveEspacial {
     /***/
     private String horario;
     /***/
@@ -11,8 +11,12 @@ public class nave_espacial {
     /***/
     private String modelo;
     /***/
-    private ArrayList<asiento> asientos = new ArrayList<>();
+    private ArrayList<Asiento> asientos = new ArrayList<>();
     /***/
-    public nave_espacial() {
+    public NaveEspacial() {
+    }
+    /***/
+    public void add(Asiento asiento) {
+        asientos.add(asiento);
     }
 }
