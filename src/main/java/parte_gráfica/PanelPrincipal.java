@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 /**Panel principal de la aplicación
  * @author Gustavo González
- * @version 1, 19 de junio de 2024*/
+ * @version 2, 20 de junio de 2024*/
 public class PanelPrincipal extends JPanel {
     /**Constructor del panel principal*/
     public PanelPrincipal () {
@@ -15,6 +15,11 @@ public class PanelPrincipal extends JPanel {
         this.add(new PanelNaveEspacial(new HalcónMilenario("17:07 P.M", "Corellia")));
         this.add(new PanelNaveEspacial(new MorningStar("20:07 P.M", "Tierra")));
         this.add(new PanelNaveEspacial(new UESContactLight("06:21 A.M", "Petrichor V")));
-        this.setBackground(Color.white);
+    }
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        ImageIcon DRGIcon = new ImageIcon(getClass().getClassLoader().getResource("DRG.png"));
+        g.drawImage(DRGIcon.getImage(), 0, 0, null);
     }
 }
