@@ -8,7 +8,8 @@ import java.awt.*;
 public class PanelAsiento extends JPanel {
     /**Instancia lógica del asiento*/
     private Asiento a;
-    /**Constructor de Panelasiento*/
+    /**Constructor de Panelasiento
+     * @param a Asiento*/
     public PanelAsiento(Asiento a) {
         this.a = a;
     }

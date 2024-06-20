@@ -12,7 +12,10 @@ public abstract class NaveEspacial {
     private String modelo;
     /**Asientos de la nave espacial*/
     private ArrayList<Asiento> asientos = new ArrayList<>();
-    /**Constructor de NaveEspacial*/
+    /**Constructor de NaveEspacial
+     * @param horario String
+     * @param recorrido String
+     * @param modelo Modelos*/
     public NaveEspacial(String horario, String recorrido, Modelos modelo) {
         this.horario = horario;
         this.recorrido = recorrido;

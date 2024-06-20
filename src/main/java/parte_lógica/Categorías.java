@@ -11,7 +11,8 @@ public enum Categorías {
     /**Precio del asiento*/
     private final int precio;
     /**Constructor de categorías
-     * @param categoría String*/
+     * @param categoría String
+     * @param precio int*/
     Categorías(String categoría, int precio) {
         this.categoría = categoría;
         this.precio = precio;

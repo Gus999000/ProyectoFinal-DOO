@@ -11,7 +11,9 @@ public abstract class Asiento {
     private String categoría;
     /**Precio del asiento*/
     private int precio;
-    /**Constructor de la clase asiento*/
+    /**Constructor de la clase asiento
+     * @param número int
+     * @param categoría Categorías*/
     public Asiento(int número, Categorías categoría) {
         this.número = número;
         this.categoría = categoría.getCategoría();
