@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 /**Panel que representa una nave espacial
  * @author Gustavo González
- * @version versión 4, 19 de junio 2024*/
+ * @version versión 5, 27 de junio 2024*/
 public class PanelNaveEspacial extends JPanel implements ActionListener {
     /**Instancia lógica de la nave espacial*/
     private NaveEspacial n;
@@ -28,13 +28,25 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             H.setOpaque(true);
             H.setBackground(Color.white);
             this.add(H);
-            H.setBounds(10, 50, 60, 25);
+            H.setBounds(10, 35, 60, 25);
+            JLabel H1 = new JLabel(n.getHorario1());
+            H1.setForeground(Color.black);
+            H1.setOpaque(true);
+            H1.setBackground(Color.white);
+            this.add(H1);
+            H1.setBounds(10, 65, 60, 25);
+            JLabel H2 = new JLabel(n.getHorario2());
+            H2.setForeground(Color.black);
+            H2.setOpaque(true);
+            H2.setBackground(Color.white);
+            this.add(H2);
+            H2.setBounds(10, 95, 60, 25);
             JLabel R = new JLabel(n.getRecorrido());
             R.setForeground(Color.black);
             R.setOpaque(true);
             R.setBackground(Color.white);
             this.add(R);
-            R.setBounds(10, 90, 35, 25);
+            R.setBounds(10, 125, 35, 25);
         }
         else if (n.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
             this.setPreferredSize(new Dimension(257,246));
@@ -47,12 +59,24 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             H.setBackground(Color.white);
             this.add(H);
             H.setBounds(5, 45, 60, 25);
+            JLabel H1 = new JLabel(n.getHorario1());
+            H1.setForeground(Color.black);
+            H1.setOpaque(true);
+            H1.setBackground(Color.white);
+            this.add(H1);
+            H1.setBounds(5, 75, 60, 25);
+            JLabel H2 = new JLabel(n.getHorario2());
+            H2.setForeground(Color.black);
+            H2.setOpaque(true);
+            H2.setBackground(Color.white);
+            this.add(H2);
+            H2.setBounds(5, 105, 60, 25);
             JLabel R = new JLabel(n.getRecorrido());
             R.setForeground(Color.black);
             R.setOpaque(true);
             R.setBackground(Color.white);
             this.add(R);
-            R.setBounds(5, 75, 40, 25);
+            R.setBounds(5, 135, 40, 25);
         }
         else if (n.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
             this.setPreferredSize(new Dimension(512,384));
@@ -65,12 +89,24 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             H.setBackground(Color.white);
             this.add(H);
             H.setBounds(10, 35, 60, 25);
+            JLabel H1 = new JLabel(n.getHorario1());
+            H1.setForeground(Color.black);
+            H1.setOpaque(true);
+            H1.setBackground(Color.white);
+            this.add(H1);
+            H1.setBounds(10, 65, 60, 25);
+            JLabel H2 = new JLabel(n.getHorario2());
+            H2.setForeground(Color.black);
+            H2.setOpaque(true);
+            H2.setBackground(Color.white);
+            this.add(H2);
+            H2.setBounds(10, 95, 60, 25);
             JLabel R = new JLabel(n.getRecorrido());
             R.setForeground(Color.black);
             R.setOpaque(true);
             R.setBackground(Color.white);
             this.add(R);
-            R.setBounds(10, 65, 50, 25);
+            R.setBounds(10, 125, 50, 25);
         }
         else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
             this.setPreferredSize(new Dimension(422,240));
@@ -83,12 +119,24 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             H.setBackground(Color.white);
             this.add(H);
             H.setBounds(10, 35, 60, 25);
+            JLabel H1 = new JLabel(n.getHorario1());
+            H1.setForeground(Color.black);
+            H1.setOpaque(true);
+            H1.setBackground(Color.white);
+            this.add(H1);
+            H1.setBounds(10, 65, 60, 25);
+            JLabel H2 = new JLabel(n.getHorario2());
+            H2.setForeground(Color.black);
+            H2.setOpaque(true);
+            H2.setBackground(Color.white);
+            this.add(H2);
+            H2.setBounds(10, 95, 60, 25);
             JLabel R = new JLabel(n.getRecorrido());
             R.setForeground(Color.black);
             R.setOpaque(true);
             R.setBackground(Color.white);
             this.add(R);
-            R.setBounds(10, 65, 40, 25);
+            R.setBounds(10, 125, 40, 25);
         }
         else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
             this.setPreferredSize(new Dimension(150,733));
@@ -101,12 +149,24 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             H.setBackground(Color.white);
             this.add(H);
             H.setBounds(10, 275, 60, 25);
+            JLabel H1 = new JLabel(n.getHorario1());
+            H1.setForeground(Color.black);
+            H1.setOpaque(true);
+            H1.setBackground(Color.white);
+            this.add(H1);
+            H1.setBounds(10, 305, 60, 25);
+            JLabel H2 = new JLabel(n.getHorario2());
+            H2.setForeground(Color.black);
+            H2.setOpaque(true);
+            H2.setBackground(Color.white);
+            this.add(H2);
+            H2.setBounds(10, 335, 60, 25);
             JLabel R = new JLabel(n.getRecorrido());
             R.setForeground(Color.black);
             R.setOpaque(true);
             R.setBackground(Color.white);
             this.add(R);
-            R.setBounds(10, 305, 70, 25);
+            R.setBounds(10, 365, 70, 25);
         }
         X.addActionListener(this);
     }
@@ -145,6 +205,7 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
         else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
         }
         else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
+            new VentanaUESContactLight();
         }
     }
 }
