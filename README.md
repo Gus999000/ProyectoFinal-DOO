@@ -18,3 +18,6 @@ El sistema debe mostrar un menú que permita seleccionar el autobús en función
 Cambiamos el sistema de autobuses a naves espaciales y le añadimos nuevas categorías de asientos.
 
 Patron Proxy
+
+Empezamos haciendo las ventanas y naves por temas de orden.
+Decidimos crear un panel de naves espaciales que cambia según la instancia.
