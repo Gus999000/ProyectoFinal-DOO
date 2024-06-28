@@ -1,7 +1,7 @@
 package parte_lógica;
 /**Clase de un asiento
  * @author Gustavo González
- * @version versión 2, 17 de junio 2024*/
+ * @version versión 3, 28 de junio 2024*/
 public abstract class Asiento {
     /**Disponibilidad del asiento*/
     private boolean disponibilidad = true;
@@ -27,5 +27,20 @@ public abstract class Asiento {
      * @return disponibilidad del asiento*/
     public boolean getDisponibilidad() {
         return disponibilidad;
+    }
+    /**Getter del número del asiento
+     * @return número del asiento*/
+    public int getNúmero() {
+        return número;
+    }
+    /**Getter de la categoría del asiento
+     * @return categoría del asiento*/
+    public String getCategoría() {
+        return categoría;
+    }
+    /**Getter del precio del asiento
+     * @return precio del asiento*/
+    public int getPrecio() {
+        return precio;
     }
 }
