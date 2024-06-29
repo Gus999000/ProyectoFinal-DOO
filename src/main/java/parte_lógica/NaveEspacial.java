@@ -28,7 +28,7 @@ public abstract class NaveEspacial {
         this.modelo = modelo.getmodelo();
     }
     /**Método para añadir asientos*/
-    public void add(Asiento asiento) {
+    public void addAsiento(Asiento asiento) {
         asientos.add(asiento);
     }
     /**Getter del horario de la nave espacial

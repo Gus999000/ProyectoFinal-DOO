@@ -5,18 +5,18 @@ import java.awt.*;
 import java.awt.event.*;
 /**Panel que representa una nave espacial
  * @author Gustavo González
- * @version versión 7, 28 de junio 2024*/
+ * @version versión 8, 28 de junio 2024*/
 public class PanelNaveEspacial extends JPanel implements ActionListener {
     /**Instancia lógica de la nave espacial*/
-    private NaveEspacial n;
+    private NaveEspacial N;
     /**Boton que muestra el interior de la nave*/
     private JButton X;
     /**Ventana que representa el interior de las naves espaciales*/
-    private JFrame Interior;
+    private VentanaInterior Interior;
     /**Constructor de PanelNaveEspacial, es creado acorde al tipo de nave que reciba
      * @param n NaveEspacial*/
     public PanelNaveEspacial(NaveEspacial n) {
-        this.n = n;
+        this.N = n;
         this.setLayout(null);
         if(n.getModelo() == Modelos.APOLO_11.getmodelo()) {
             this.setPreferredSize(new Dimension(395,500));
@@ -47,7 +47,6 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 125, 35, 25);
-            this.Interior = new VentanaApolo11();
         }
         else if (n.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
             this.setPreferredSize(new Dimension(257,246));
@@ -78,7 +77,6 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(5, 135, 40, 25);
-            this.Interior = new VentanaArcaDelVacío();
         }
         else if (n.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
             this.setPreferredSize(new Dimension(512,384));
@@ -109,7 +107,6 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 125, 50, 25);
-            this.Interior = new VentanaHalcónMilenario();
         }
         else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
             this.setPreferredSize(new Dimension(422,240));
@@ -140,7 +137,6 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 125, 40, 25);
-            this.Interior = new VentanaMorningStar();
         }
         else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
             this.setPreferredSize(new Dimension(150,733));
@@ -171,49 +167,49 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 365, 70, 25);
-            this.Interior = new VentanaUESContactLight();
         }
         X.addActionListener(this);
+        this.Interior = new VentanaInterior(n);
     }
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        if(n.getModelo() == Modelos.APOLO_11.getmodelo()) {
+        if(N.getModelo() == Modelos.APOLO_11.getmodelo()) {
             ImageIcon APOLO_11Icon = new ImageIcon(getClass().getClassLoader().getResource("Apolo_11.png"));
             g.drawImage(APOLO_11Icon.getImage(), 0, 0, null);
         }
-        else if (n.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
+        else if (N.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
             ImageIcon ARCA_DEL_VACÍOIcon = new ImageIcon(getClass().getClassLoader().getResource("Arca_del_Vacío.png"));
             g.drawImage(ARCA_DEL_VACÍOIcon.getImage(), 0, 0, null);
         }
-        else if (n.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
+        else if (N.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
             ImageIcon HALCÓN_MILENARIOIcon = new ImageIcon(getClass().getClassLoader().getResource("Halcón_Milenario.png"));
             g.drawImage(HALCÓN_MILENARIOIcon.getImage(), 0, 0, null);
         }
-        else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
+        else if (N.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
             ImageIcon MORNING_STARIcon = new ImageIcon(getClass().getClassLoader().getResource("Morning_Star.png"));
             g.drawImage(MORNING_STARIcon.getImage(), 0, 0, null);
         }
-        else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
+        else if (N.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
             ImageIcon UES_CONTACT_LIGHTIcon = new ImageIcon(getClass().getClassLoader().getResource("UES_Contact_Light.png"));
             g.drawImage(UES_CONTACT_LIGHTIcon.getImage(), 0, 0, null);
         }
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(n.getModelo() == Modelos.APOLO_11.getmodelo()) {
+        if(N.getModelo() == Modelos.APOLO_11.getmodelo()) {
             this.Interior.setVisible(true);
         }
-        else if (n.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
+        else if (N.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
             this.Interior.setVisible(true);
         }
-        else if (n.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
+        else if (N.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
             this.Interior.setVisible(true);
         }
-        else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
+        else if (N.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
             this.Interior.setVisible(true);
         }
-        else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
+        else if (N.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
             this.Interior.setVisible(true);
         }
     }
