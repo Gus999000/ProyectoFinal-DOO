@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 /**Panel que representa un asiento
  * @author Gustavo González
- * @version versión 2, 17 de junio 2024*/
+ * @version versión 3, 29 de junio 2024*/
 public class PanelAsiento extends JPanel {
     /**Instancia lógica del asiento*/
     private Asiento a;
@@ -12,6 +12,8 @@ public class PanelAsiento extends JPanel {
      * @param a Asiento*/
     public PanelAsiento(Asiento a) {
         this.a = a;
+        this.setPreferredSize(new Dimension(100,100));
+        this.add(new JLabel(String.valueOf(a.getNúmero())));
     }
     @Override
     public void paintComponent(Graphics g) {
