@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 /**Panel que representa una nave espacial
  * @author Gustavo González
- * @version versión 8, 28 de junio 2024*/
+ * @version versión 9, 02 de julio 2024*/
 public class PanelNaveEspacial extends JPanel implements ActionListener {
     /**Instancia lógica de la nave espacial*/
     private NaveEspacial N;
@@ -197,19 +197,7 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(N.getModelo() == Modelos.APOLO_11.getmodelo()) {
-            this.Interior.setVisible(true);
-        }
-        else if (N.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
-            this.Interior.setVisible(true);
-        }
-        else if (N.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
-            this.Interior.setVisible(true);
-        }
-        else if (N.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
-            this.Interior.setVisible(true);
-        }
-        else if (N.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
+        if(e.getSource() == X) {
             this.Interior.setVisible(true);
         }
     }
