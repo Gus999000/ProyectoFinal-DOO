@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 /**Panel que representa un asiento
  * @author Gustavo González
- * @version versión 3, 29 de junio 2024*/
+ * @version versión 4, 01 de julio 2024*/
 public class PanelAsiento extends JPanel {
     /**Instancia lógica del asiento*/
     private Asiento a;
@@ -14,6 +14,12 @@ public class PanelAsiento extends JPanel {
         this.a = a;
         this.setPreferredSize(new Dimension(100,100));
         this.add(new JLabel(String.valueOf(a.getNúmero())));
+    }
+    /**Método que cambia la disponibilidad a "no disponible", revalida el panel y lo repinta*/
+    public void reservarPanel() {
+        this.a.reservar();
+        revalidate();
+        repaint();
     }
     @Override
     public void paintComponent(Graphics g) {

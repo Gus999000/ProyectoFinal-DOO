@@ -5,11 +5,11 @@ import java.awt.*;
 import java.util.*;
 /**Panel que representa el interior de las naves espaciales
  * @author Gustavo González
- * @version versión 1, 30 de junio 2024*/
+ * @version versión 2, 01 de julio 2024*/
 public class PanelInterior extends JPanel {
     /**Instancia lógica de la nave espacial*/
     private NaveEspacial n;
-    /***/
+    /**Paneles de los asientos de la nave espacial*/
     private ArrayList<PanelAsiento> PanelesAsientos = new ArrayList<>();
     /**Constructor de PanelInterior*/
     public PanelInterior(NaveEspacial n) {
@@ -29,6 +29,9 @@ public class PanelInterior extends JPanel {
         }
         else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
             this.setPreferredSize(new Dimension(499, 261));
+            for (int i = 0; i < 100; i = i + 1) {
+                this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
         }
     }
     @Override
