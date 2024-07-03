@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.*;
 /**Panel que representa el interior de las naves espaciales
  * @author Gustavo González
- * @version versión 2, 01 de julio 2024*/
+ * @version versión 3, 03 de julio 2024*/
 public class PanelInterior extends JPanel {
     /**Instancia lógica de la nave espacial*/
     private NaveEspacial n;
@@ -17,20 +17,48 @@ public class PanelInterior extends JPanel {
         this.setLayout(null);
         if(n.getModelo() == Modelos.APOLO_11.getmodelo()) {
             this.setPreferredSize(new Dimension(760, 570));
+            for (int i = 0; i < 50; i = i + 1) {
+                this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
+            for (int i = 0; i < 10; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + i * 50, 100, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 10; i < 20; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 10) * 50, 150, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
         }
         else if (n.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
             this.setPreferredSize(new Dimension(750, 594));
+            for (int i = 0; i < 40; i = i + 1) {
+                this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
         }
         else if (n.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
             this.setPreferredSize(new Dimension(750, 500));
+            for (int i = 0; i < 30; i = i + 1) {
+                this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
         }
         else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
             this.setPreferredSize(new Dimension(750, 481));
+            for (int i = 0; i < 50; i = i + 1) {
+                this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
         }
         else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
             this.setPreferredSize(new Dimension(499, 261));
             for (int i = 0; i < 100; i = i + 1) {
                 this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
+            for (int i = 0; i < 5; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + i * 50, 50, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 5; i < 10; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 5) * 50, 100, 50, 50);
+                this.add(PanelesAsientos.get(i));
             }
         }
     }
