@@ -1,6 +1,6 @@
 package parte_lógica;
 /**Categorías de asiento
- * @author Gustavo González
+ * @author Gustavo Benítez
  * @version versión 3, 29 de junio 2024*/
 public enum Categorías {
     /**Constantes de la enumeración (categorías de asientos)*/

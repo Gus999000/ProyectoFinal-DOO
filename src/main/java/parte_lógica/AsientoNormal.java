@@ -1,6 +1,6 @@
 package parte_lógica;
 /**Clase AsientoNormal
- * @author Gustavo González
+ * @author Gustavo Benítez
  * @version versión 1, 29 de junio 2024*/
 public class AsientoNormal extends Asiento {
     /**Constructor de la clase AsientoNormal

@@ -1,6 +1,6 @@
 package parte_lógica;
 /**Clase de un asiento
- * @author Gustavo González
+ * @author Gustavo Benítez
  * @version versión 3, 28 de junio 2024*/
 public abstract class Asiento {
     /**Disponibilidad del asiento*/

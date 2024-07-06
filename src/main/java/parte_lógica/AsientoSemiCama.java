@@ -1,6 +1,6 @@
 package parte_lógica;
 /**Clase AsientoSemiCama
- * @author Gustavo González
+ * @author Gustavo Benítez
  * @version versión 1, 29 de junio 2024*/
 public class AsientoSemiCama extends Asiento{
     /**Constructor de la clase AsientoSemiCama
