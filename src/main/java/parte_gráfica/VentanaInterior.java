@@ -6,7 +6,9 @@ import java.awt.*;
  * @author Gustavo González
  * @version versión 3, 05 de julio 2024*/
 public class VentanaInterior extends JFrame {
-    /**Constructor de VentanaInterior*/
+    /**Constructor de VentanaInterior
+     * @param n NaveEspacial
+     * @param Z int*/
     public VentanaInterior(NaveEspacial n, int Z) {
         this.setLayout(new BorderLayout());
         if(n.getModelo() == Modelos.APOLO_11.getmodelo()) {

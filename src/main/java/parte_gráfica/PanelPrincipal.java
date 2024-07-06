@@ -7,7 +7,7 @@ import java.awt.*;
  * @version 3, 26 de junio de 2024*/
 public class PanelPrincipal extends JPanel {
     /**Constructor del panel principal*/
-    public PanelPrincipal () {
+    public PanelPrincipal() {
         super();
         this.setLayout(new FlowLayout());
         this.add(new PanelNaveEspacial(new Apolo11("13:32 P.M", "18:07 P.M", "21:22 P.M", "Luna")));

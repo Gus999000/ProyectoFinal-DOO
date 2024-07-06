@@ -11,7 +11,9 @@ public class PanelInterior extends JPanel {
     private NaveEspacial n;
     /**Paneles de los asientos de la nave espacial*/
     private ArrayList<PanelAsiento> PanelesAsientos = new ArrayList<>();
-    /**Constructor de PanelInterior*/
+    /**Constructor de PanelInterior
+     * @param n NaveEspacial
+     * @param ZZZ int*/
     public PanelInterior(NaveEspacial n, int ZZZ) {
         this.n = n;
         this.setLayout(null);
