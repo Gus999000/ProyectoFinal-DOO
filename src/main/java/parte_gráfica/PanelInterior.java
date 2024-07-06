@@ -5,14 +5,14 @@ import java.awt.*;
 import java.util.*;
 /**Panel que representa el interior de las naves espaciales
  * @author Gustavo González
- * @version versión 3, 03 de julio 2024*/
+ * @version versión 4, 05 de julio 2024*/
 public class PanelInterior extends JPanel {
     /**Instancia lógica de la nave espacial*/
     private NaveEspacial n;
     /**Paneles de los asientos de la nave espacial*/
     private ArrayList<PanelAsiento> PanelesAsientos = new ArrayList<>();
     /**Constructor de PanelInterior*/
-    public PanelInterior(NaveEspacial n) {
+    public PanelInterior(NaveEspacial n, int ZZZ) {
         this.n = n;
         this.setLayout(null);
         if(n.getModelo() == Modelos.APOLO_11.getmodelo()) {
@@ -28,11 +28,43 @@ public class PanelInterior extends JPanel {
                 PanelesAsientos.get(i).setBounds(120 + (i - 10) * 50, 150, 50, 50);
                 this.add(PanelesAsientos.get(i));
             }
+            for (int i = 20; i < 30; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 20) * 50, 250, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 30; i < 40; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 30) * 50, 350, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 40; i < 50; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 40) * 50, 450, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
         }
         else if (n.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
             this.setPreferredSize(new Dimension(750, 594));
             for (int i = 0; i < 40; i = i + 1) {
                 this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
+            for (int i = 0; i < 10; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + i * 50, 100, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 10; i < 20; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 10) * 50, 150, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 20; i < 30; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 20) * 50, 200, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 30; i < 35; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(245 + (i - 30) * 50, 300, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 35; i < 40; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(245 + (i - 35) * 50, 350, 50, 50);
+                this.add(PanelesAsientos.get(i));
             }
         }
         else if (n.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
@@ -40,11 +72,43 @@ public class PanelInterior extends JPanel {
             for (int i = 0; i < 30; i = i + 1) {
                 this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
             }
+            for (int i = 0; i < 10; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + i * 50, 100, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 10; i < 20; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 10) * 50, 150, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 20; i < 30; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 20) * 50, 250, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
         }
         else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
             this.setPreferredSize(new Dimension(750, 481));
             for (int i = 0; i < 50; i = i + 1) {
                 this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
+            }
+            for (int i = 0; i < 10; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + i * 50, 50, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 10; i < 20; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 10) * 50, 100, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 20; i < 30; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 20) * 50, 150, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 30; i < 40; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 30) * 50, 250, 50, 50);
+                this.add(PanelesAsientos.get(i));
+            }
+            for (int i = 40; i < 50; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - 40) * 50, 350, 50, 50);
+                this.add(PanelesAsientos.get(i));
             }
         }
         else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
@@ -52,12 +116,12 @@ public class PanelInterior extends JPanel {
             for (int i = 0; i < 100; i = i + 1) {
                 this.PanelesAsientos.add(new PanelAsiento(n.getAsiento(i)));
             }
-            for (int i = 0; i < 5; i = i + 1) {
-                PanelesAsientos.get(i).setBounds(120 + i * 50, 50, 50, 50);
+            for (int i = ZZZ; i < ZZZ + 5; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - ZZZ) * 50, 50, 50, 50);
                 this.add(PanelesAsientos.get(i));
             }
-            for (int i = 5; i < 10; i = i + 1) {
-                PanelesAsientos.get(i).setBounds(120 + (i - 5) * 50, 100, 50, 50);
+            for (int i = ZZZ + 5; i < ZZZ + 10; i = i + 1) {
+                PanelesAsientos.get(i).setBounds(120 + (i - (ZZZ + 5)) * 50, 100, 50, 50);
                 this.add(PanelesAsientos.get(i));
             }
         }

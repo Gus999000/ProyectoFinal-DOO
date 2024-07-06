@@ -3,9 +3,10 @@ import parte_lógica.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.*;
 /**Panel que representa una nave espacial
  * @author Gustavo González
- * @version versión 9, 02 de julio 2024*/
+ * @version versión 10, 05 de julio 2024*/
 public class PanelNaveEspacial extends JPanel implements ActionListener {
     /**Instancia lógica de la nave espacial*/
     private NaveEspacial N;
@@ -13,6 +14,10 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
     private JButton X;
     /**Ventana que representa el interior de las naves espaciales*/
     private VentanaInterior Interior;
+    /**Lista de ventanas que representan el interior del UES Contact Light*/
+    private ArrayList<VentanaInterior> InteriorUESContactLight = new ArrayList<>();
+    /**Parámetro de tipo int utilizado para manejar los asientos del UES Contact Light*/
+    private int z = 0;
     /**Constructor de PanelNaveEspacial, es creado acorde al tipo de nave que reciba
      * @param n NaveEspacial*/
     public PanelNaveEspacial(NaveEspacial n) {
@@ -47,6 +52,7 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 125, 35, 25);
+            this.Interior = new VentanaInterior(n, z);
         }
         else if (n.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
             this.setPreferredSize(new Dimension(257,246));
@@ -77,6 +83,7 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(5, 135, 40, 25);
+            this.Interior = new VentanaInterior(n, z);
         }
         else if (n.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
             this.setPreferredSize(new Dimension(512,384));
@@ -107,6 +114,7 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 125, 50, 25);
+            this.Interior = new VentanaInterior(n, z);
         }
         else if (n.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
             this.setPreferredSize(new Dimension(422,240));
@@ -137,6 +145,7 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 125, 40, 25);
+            this.Interior = new VentanaInterior(n, z);
         }
         else if (n.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
             this.setPreferredSize(new Dimension(150,733));
@@ -167,9 +176,12 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
             R.setBackground(Color.white);
             this.add(R);
             R.setBounds(10, 365, 70, 25);
+            for (int i = 0; i < 10; i = i + 1) {
+                this.InteriorUESContactLight.add(new VentanaInterior(n, z));
+                this.z = z + 10;
+            }
         }
         X.addActionListener(this);
-        this.Interior = new VentanaInterior(n);
     }
     @Override
     public void paintComponent(Graphics g) {
@@ -197,8 +209,22 @@ public class PanelNaveEspacial extends JPanel implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == X) {
+        if(N.getModelo() == Modelos.APOLO_11.getmodelo()) {
             this.Interior.setVisible(true);
+        }
+        else if (N.getModelo() == Modelos.ARCA_DEL_VACÍO.getmodelo()) {
+            this.Interior.setVisible(true);
+        }
+        else if (N.getModelo() == Modelos.HALCÓN_MILENARIO.getmodelo()) {
+            this.Interior.setVisible(true);
+        }
+        else if (N.getModelo() == Modelos.MORNING_STAR.getmodelo()) {
+            this.Interior.setVisible(true);
+        }
+        else if (N.getModelo() == Modelos.UES_CONTACT_LIGHT.getmodelo()) {
+            for (int i = 0; i < 10; i = i + 1) {
+                this.InteriorUESContactLight.get(i).setVisible(true);
+            }
         }
     }
 }
