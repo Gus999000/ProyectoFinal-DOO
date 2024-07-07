@@ -17,7 +17,13 @@ El sistema debe mostrar un menú que permita seleccionar el autobús en función
 
 Cambiamos el sistema de autobuses a naves espaciales y le añadimos nuevas categorías de asientos.
 
-Patron Proxy
+Al ejecutar el programa se muestran las 5 naves espaciales disponibles, con horarios y destino (Interfaz/VentanaPrincipal.png).
+Al seleccionar una nave, se abre una ventana mostrando su interior (Interfaz/VentanaApolo11.png, Interfaz/VentanaArcaDelVacío.png, Interfaz/VentanaHalcónMilenario.png, Interfaz/VentanaMorningStar.png) y al seleccionar la nave UES Contact Light se abren los 10 “pisos” disponibles (Interfaz/VentanaUESContactLightPiso1-10.png). Se exponen los asientos disponibles en verde, al clicar en uno se abre una ventana mostrando información del asiento (Interfaz/VentanaReservar.png) y dando la opción de “Reservar”, al reservar el asiento, este cambia del color verde al rojo indicando que no esta disponible.
 
 Empezamos haciendo las ventanas y naves por temas de orden.
+
 Decidimos crear un panel de naves espaciales que cambia según la instancia.
+
+Al hacer los paneles de los asientos estos no cambiaban el color del fondo, así que decidimos hacer del panel entero un botón que cambia de color.
+
+Podríamos haber implementado los “pisos” del UES Contact Light de una mejor manera.
